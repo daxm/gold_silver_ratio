@@ -27,7 +27,8 @@ data = json.loads(res.read().decode("utf-8"))
 gold_price = data['price']
 
 gold_silver_ratio = round(gold_price/silver_price, 2)
-
+print(f"Gold Price: {gold_price}")
+print(f"Silver Price: {silver_price}")
 print(f"Today's gold to silver ratio is: {gold_silver_ratio}")
 if gold_silver_ratio >= buy_silver_ratio_min:
     print("Buy Silver!")
